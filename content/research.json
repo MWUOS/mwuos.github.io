@@ -28,7 +28,8 @@
           "src": "/images/research/ism-microwave-energy.jpg",
           "width": 820,
           "height": 386,
-          "alt": "Block diagram of a solid-state microwave oven: a 2.45 GHz signal generator feeds phase shifters and LDMOS power amplifiers that drive a multi-port cavity, with sensing and control loops"
+          "alt": "Block diagram of a solid-state microwave oven: a 2.45 GHz signal generator feeds phase shifters and LDMOS power amplifiers that drive a multi-port cavity, with sensing and control loops",
+          "caption": { "en": "Solid-state microwave heating system", "ko": "반도체 기반 마이크로파 가열 시스템 구성도" }
         }
       }
     ]
@@ -63,10 +64,11 @@
           ]
         },
         "image": {
-          "src": "/images/research/microwave-plasma-array-field.png",
-          "width": 640,
-          "height": 478,
-          "alt": "Simulated electric-field magnitude just below the dielectric windows of a 4 by 4 microwave plasma source array, nearly uniform across the chamber"
+          "src": "/images/research/microwave-plasma-array.png",
+          "width": 778,
+          "height": 300,
+          "alt": "A 4 by 4 array of microwave plasma sources mounted on a process chamber, shown in 3D, from the top, and in cross-section above the substrate holder",
+          "caption": { "en": "4×4 plasma source array (3D, top view, cross-section)", "ko": "4×4 플라즈마 소스 어레이 (3D·윗면·단면)" }
         }
       }
     ]
@@ -100,7 +102,8 @@
           "src": "/images/research/emp-gun-antenna.jpg",
           "width": 844,
           "height": 363,
-          "alt": "EMP gun antenna model and its simulated E-field at a 1.5 km range, covering a 52.36 m diameter area at 10 kV/m"
+          "alt": "EMP gun antenna model and its simulated E-field at a 1.5 km range, covering a 52.36 m diameter area at 10 kV/m",
+          "caption": { "en": "Cassegrain antenna and simulated E-field at 1.5 km", "ko": "Cassegrain 안테나와 1.5 km 거리의 전계 분포 (시뮬레이션)" }
         }
       }
     ]
