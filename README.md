@@ -152,7 +152,7 @@ git을 설치하지 않아도 됩니다.
       "id": "microwave-plasma-source",
       "title": { "en": "...", "ko": "화합물 반도체 기반 초고주파 플라즈마 소스 개발" },
       "points": { "en": ["..."], "ko": ["플라즈마 모델링 및 ... 개발"] },
-      "image": { "src": "/images/research/microwave-plasma-source.jpg", "width": 431, "height": 291, "alt": "..." }
+      "image": { "src": "/images/research/microwave-plasma-array.png", "width": 778, "height": 300, "alt": "..." }
     }
   ]
 }
