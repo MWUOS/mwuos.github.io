@@ -2,27 +2,11 @@
 
 import { useRef, useState, type KeyboardEvent } from "react";
 
-import L from "@/components/L";
-import type { Localized, Publication, PublicationType } from "@/lib/content";
+import type { Publication } from "@/lib/content";
 
 import PublicationEntry from "./PublicationEntry";
 
 type YearGroup = { year: number; items: Publication[] };
-type TypeOption = { value: PublicationType; label: Localized };
-
-/** "전부 보기" 상태. PublicationType 값과 겹치지 않아야 한다. */
-const ALL = "all";
-
-type Selection = PublicationType | typeof ALL;
-
-function filterButtonClass(selected: boolean): string {
-  return [
-    "rounded-full border px-3 py-1.5 text-sm transition-colors",
-    selected
-      ? "border-accent bg-accent-soft font-medium text-accent"
-      : "border-line text-ink-muted hover:border-ink-muted hover:text-ink",
-  ].join(" ");
-}
 
 function tabClass(selected: boolean): string {
   return [
@@ -42,15 +26,10 @@ function decadeOf(year: number): number {
  * 10년 단위 탭과 연도별 목록. 논문이 많아 한 페이지에 다 펼치면 너무 길어서
  * 한 번에 한 구간만 보여 준다. 탭은 논문 연도에서 만들므로 논문이 있는 연대만 생기고,
  * 새 연대의 논문이 추가되면 탭도 저절로 늘어난다.
+ * 논문 종류(저널·학술대회)는 위의 PublicationSections가 나누고, 여기에는 한 종류만 들어온다.
  * 상호작용이 필요한 부분만 클라이언트로 내리고, 데이터 로딩·정렬은 page.tsx(서버)가 맡는다.
  */
-export default function PublicationBrowser({
-  groups,
-  types,
-}: {
-  groups: YearGroup[];
-  types: TypeOption[];
-}) {
+export default function PublicationBrowser({ groups }: { groups: YearGroup[] }) {
   // 최근 연대가 앞에 온다. 처음에는 첫 탭이 열린다.
   const tabs = [...new Set(groups.map((group) => decadeOf(group.year)))]
     .sort((a, b) => b - a)
@@ -63,24 +42,13 @@ export default function PublicationBrowser({
     }));
 
   const [periodId, setPeriodId] = useState(tabs[0]?.id ?? "");
-  const [selected, setSelected] = useState<Selection>(ALL);
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const current = tabs.find((tab) => tab.id === periodId) ?? tabs[0];
 
-  // 타입이 한 종류뿐이면 고를 것이 없으므로 필터를 아예 그리지 않는다.
-  const showFilter = types.length > 1;
-
-  // 구간 → 타입 순으로 거르고, 그 결과 빈 연도가 생기면 연도째 뺀다.
-  const visible = groups
-    .filter((group) => current === undefined || decadeOf(group.year) === current.decade)
-    .map((group) => ({
-      year: group.year,
-      items:
-        selected === ALL ? group.items : group.items.filter((item) => item.type === selected),
-    }))
-    .filter((group) => group.items.length > 0);
-
+  const visible = groups.filter(
+    (group) => current === undefined || decadeOf(group.year) === current.decade,
+  );
 
   /** WAI-ARIA 탭 패턴: 좌우 화살표·Home·End로 탭을 옮기고 바로 연다. */
   function onTabKeyDown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
@@ -144,60 +112,25 @@ export default function PublicationBrowser({
           tabs.length > 1 && current ? `publications-tab-${current.id}` : undefined
         }
       >
-        {/* 논문 수는 탭 옆에 이미 나오므로 따로 적지 않는다 */}
-        {showFilter ? (
-          <div
-            role="group"
-            aria-label="Filter by publication type / 논문 종류"
-            className="mt-6 flex flex-wrap gap-2"
-          >
-            <button
-              type="button"
-              aria-pressed={selected === ALL}
-              onClick={() => setSelected(ALL)}
-              className={filterButtonClass(selected === ALL)}
-            >
-              <L en="All" ko="전체" fit="center" />
-            </button>
-            {types.map((type) => (
-              <button
-                key={type.value}
-                type="button"
-                aria-pressed={selected === type.value}
-                onClick={() => setSelected(type.value)}
-                className={filterButtonClass(selected === type.value)}
+        <div className="mt-8 space-y-12 sm:mt-10">
+          {visible.map((group) => (
+            <section key={group.year} aria-labelledby={`publications-${group.year}`}>
+              <h2
+                id={`publications-${group.year}`}
+                className="border-b border-line pb-2 text-xl font-semibold tracking-tight"
               >
-                <L {...type.label} fit="center" />
-              </button>
-            ))}
-          </div>
-        ) : null}
-
-        {visible.length === 0 ? (
-          <p className="mt-10 rounded-lg border border-dashed border-line bg-surface px-5 py-12 text-center text-ink-muted">
-            <L en="No publications match this filter." ko="조건에 맞는 논문이 없습니다." />
-          </p>
-        ) : (
-          <div className="mt-8 space-y-12 sm:mt-10">
-            {visible.map((group) => (
-              <section key={group.year} aria-labelledby={`publications-${group.year}`}>
-                <h2
-                  id={`publications-${group.year}`}
-                  className="border-b border-line pb-2 text-xl font-semibold tracking-tight"
-                >
-                  {group.year}
-                </h2>
-                <ul className="mt-6 space-y-8">
-                  {group.items.map((publication) => (
-                    <li key={publication.id}>
-                      <PublicationEntry publication={publication} />
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-        )}
+                {group.year}
+              </h2>
+              <ul className="mt-6 space-y-8">
+                {group.items.map((publication) => (
+                  <li key={publication.id}>
+                    <PublicationEntry publication={publication} />
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
       </div>
     </div>
   );

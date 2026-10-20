@@ -42,7 +42,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       data-lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      // 스크롤바 자리를 늘 비워 둔다. 짧은 페이지에서 스크롤바가 사라져 헤더가 옆으로 밀리지 않게 한다
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased [scrollbar-gutter:stable]`}
     >
       <head>
         {/* 저장된 언어를 첫 페인트 전에 적용한다 (lib/lang.ts) */}

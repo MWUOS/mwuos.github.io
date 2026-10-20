@@ -2,12 +2,7 @@ import { Fragment, type ReactNode } from "react";
 
 import ContentText from "@/components/ContentText";
 import L from "@/components/L";
-import {
-  isTodo,
-  PUBLICATION_TYPE_LABEL,
-  type Localized,
-  type Publication,
-} from "@/lib/content";
+import { isTodo, type Localized, type Publication } from "@/lib/content";
 
 type EntryLink = { key: string; label: Localized; href: string };
 type CitationPart = { key: string; node: ReactNode };
@@ -69,20 +64,27 @@ export default function PublicationEntry({ publication }: { publication: Publica
   // 제목이 아직 TODO면 그 문자열을 링크 이름으로 읽히게 두지 않는다.
   const linkContext = isTodo(publication.title) ? "this publication" : publication.title;
 
+  // 논문 종류는 위의 구분 탭(Journal Papers 등)이 이미 말해 주므로 배지로 다시 적지 않는다
+  const hasBadges = publication.sci || Boolean(publication.award);
+
   return (
     <article>
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="rounded-full border border-line bg-surface px-2.5 py-0.5 text-xs font-medium text-ink-muted">
-          <L {...PUBLICATION_TYPE_LABEL[publication.type]} fit="center" />
-        </span>
-        {publication.award ? (
-          <span className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent">
-            <ContentText value={publication.award} />
-          </span>
-        ) : null}
-      </div>
+      {hasBadges ? (
+        <div className="mb-2 flex flex-wrap items-center gap-2">
+          {publication.sci ? (
+            <span className="rounded-full border border-accent/30 bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent">
+              SCI(E)
+            </span>
+          ) : null}
+          {publication.award ? (
+            <span className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent">
+              <ContentText value={publication.award} />
+            </span>
+          ) : null}
+        </div>
+      ) : null}
 
-      <h3 className="mt-2 break-words text-base font-medium leading-snug sm:text-lg">
+      <h3 className="break-words text-base font-medium leading-snug sm:text-lg">
         <ContentText value={publication.title} />
       </h3>
 

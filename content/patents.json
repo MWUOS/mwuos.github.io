@@ -108,5 +108,117 @@
     "titleEn": "",
     "status": "filed",
     "year": 2025
+  },
+  {
+    "title": "재구성 가능한 전력 분배기",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2025,
+    "applicationNo": "10-2024-0190257",
+    "registrationNo": "10-2907760"
+  },
+  {
+    "title": "하프 모드 기판집적형 도파관을 이용한 자체발진혼합기",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2025,
+    "applicationNo": "10-2022-0126815",
+    "registrationNo": "10-2781289"
+  },
+  {
+    "title": "기생 안테나와의 갭 결합을 이용한 광각 마이크로스트립 패치 안테나",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2024,
+    "applicationNo": "10-2022-0008593",
+    "registrationNo": "10-2713318"
+  },
+  {
+    "title": "부하 임피던스 측정 시스템",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2024,
+    "applicationNo": "10-2022-0031350",
+    "registrationNo": "10-2704319"
+  },
+  {
+    "title": "대각 아이리스(Iris) 결합을 이용한 기판 집적형 도파관(SIW, Substrate Integrated Waveguide)형 합차 모드 비교기 및 유전체 공진기 안테나",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2024,
+    "applicationNo": "10-2022-0090660",
+    "registrationNo": "10-2692966"
+  },
+  {
+    "title": "단일 소체 세라믹 웨이브가이드 듀플렉서",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2023,
+    "applicationNo": "10-2021-0055248",
+    "registrationNo": "10-2495987"
+  },
+  {
+    "title": "하모닉 이중 대역 혼합기",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2022,
+    "applicationNo": "10-2020-0015217",
+    "registrationNo": "10-2408434"
+  },
+  {
+    "title": "넓은 빔폭을 출력하기 위한 블랙 박스용 안테나 장치",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2022,
+    "applicationNo": "10-2021-0175323",
+    "registrationNo": "10-2407898"
+  },
+  {
+    "title": "방향성 결합기를 이용한 고격리도 특성을 갖는 안테나 장치",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2022,
+    "applicationNo": "10-2021-0175324",
+    "registrationNo": "10-2392228"
+  },
+  {
+    "title": "하모닉 이중 대역 역병렬 다이오드 주파수 혼합기",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2021,
+    "applicationNo": "10-2019-0143135",
+    "registrationNo": "10-2337322"
+  },
+  {
+    "title": "비대칭 커플링을 갖는 도파관 필터",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2021,
+    "applicationNo": "10-2020-0044032",
+    "registrationNo": "10-2333921"
+  },
+  {
+    "title": "마이크로스트립 방향성 결합기",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2021,
+    "applicationNo": "10-2020-0141346",
+    "registrationNo": "10-2302423"
+  },
+  {
+    "title": "필테나",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2021,
+    "applicationNo": "10-2020-0074144",
+    "registrationNo": "10-2265912"
+  },
+  {
+    "title": "스트립라인 필터",
+    "titleEn": "",
+    "status": "registered",
+    "year": 2021,
+    "applicationNo": "10-2019-0085530",
+    "registrationNo": "10-2203957"
   }
 ]

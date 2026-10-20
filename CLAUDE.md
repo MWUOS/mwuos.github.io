@@ -12,7 +12,7 @@ Next.js 16의 변경점은 `next dev`가 자동 생성·갱신하는 AGENTS.md�
 |---|---|
 | 영문 명칭 | Intelligent μWave Energy Center |
 | 국문 명칭 | 지능형 전파 에너지 연구 센터 |
-| 약어 | IUEC |
+| 약어 | IMEC |
 | 소속(영문) | School of Electrical and Computer Engineering, University of Seoul |
 | 소속(국문) | 서울시립대학교 전자전기컴퓨터공학부 |
 | GitHub | https://github.com/MWUOS |
@@ -64,7 +64,7 @@ app/                    # 라우트 (페이지당 1폴더)
   not-found.tsx         # 404 — 정적 export에서 out/404.html 이 된다
   globals.css           # 색상 토큰 (CSS 변수는 여기 한 곳에서만)
   icon.svg              # favicon. 로고 확정 시 교체 (#4)
-  research/ publications/ album/
+  research/ publications/ alumni/ album/
   members/              # professor/ · students/ 두 페이지. /members/ 자체는 교수 페이지로 보낸다
   _news/                # News — 소식이 생길 때까지 숨김(밑줄 폴더는 라우트가 되지 않는다)
 components/             # 재사용 UI (라우트에 종속되지 않는 것만)

@@ -118,6 +118,8 @@ const publicationSchema = z.object({
   pdf: pathOrUrl,
   code: urlField,
   award: z.string().nullable().default(null),
+  /** 게재 당시 SCI(E) 등재 저널이면 true. 저널 배지 옆에 SCI(E) 배지가 붙는다. */
+  sci: z.boolean().default(false),
   highlight: z.boolean().default(false),
 });
 

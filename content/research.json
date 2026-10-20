@@ -37,11 +37,11 @@
     "id": "microwave-plasma",
     "title": {
       "en": "Microwave Plasma Sources",
-      "ko": "마이크로파 플라즈마"
+      "ko": "마이크로파 플라즈마 소스"
     },
     "summary": {
-      "en": "Compound-semiconductor-based microwave plasma sources, from plasma modeling to source design.",
-      "ko": "화합물 반도체 기반 초고주파 플라즈마 소스를 플라즈마 모델링부터 소스 설계까지 연구합니다."
+      "en": "2.45 GHz microwave plasma sources driven by compound-semiconductor power amplifiers, from plasma load modeling to single-source and array design.",
+      "ko": "화합물 반도체 전력증폭기로 구동하는 2.45 GHz 마이크로파 플라즈마 소스를 플라즈마 부하 모델링부터 단일 소스·어레이 설계까지 연구합니다."
     },
     "projects": [
       {
@@ -52,19 +52,21 @@
         },
         "points": {
           "en": [
-            "Plasma modeling and design/development of a microwave plasma source",
-            "Improvement of existing plasma sources by using TM01 and TM02 mode coupling"
+            "Plasma load modeling with an equivalent complex permittivity, and design of 2.45 GHz microwave plasma sources",
+            "Array-type plasma generating devices with multiple sources for large-area processing",
+            "Coupled electromagnetic and thermal analysis for high-power operation"
           ],
           "ko": [
-            "플라즈마 모델링 및 마이크로웨이브 플라즈마 소스 설계 및 개발",
-            "TM01, TM02 모드 결합을 이용하여 기존 플라즈마 소스 개선"
+            "등가 복소 유전율 기반 플라즈마 부하 모델링 및 2.45 GHz 마이크로파 플라즈마 소스 설계",
+            "다수의 소스를 배열한 대면적 공정용 어레이형 플라즈마 발생 장치",
+            "고출력 동작을 위한 전자기·열 연계 해석"
           ]
         },
         "image": {
-          "src": "/images/research/microwave-plasma-source.jpg",
-          "width": 431,
-          "height": 291,
-          "alt": "Simulated electric-field contours of a microwave plasma source, with the plasma region forming at its open end"
+          "src": "/images/research/microwave-plasma-array-field.png",
+          "width": 640,
+          "height": 478,
+          "alt": "Simulated electric-field magnitude just below the dielectric windows of a 4 by 4 microwave plasma source array, nearly uniform across the chamber"
         }
       }
     ]

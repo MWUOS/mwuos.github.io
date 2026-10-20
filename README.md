@@ -1,6 +1,6 @@
 # Intelligent μWave Energy Center
 
-서울시립대학교 전자전기컴퓨터공학부 **지능형 전파-에너지 연구센터(IUEC)** 홈페이지.
+서울시립대학교 전자전기컴퓨터공학부 **지능형 전파-에너지 연구센터(IMEC)** 홈페이지.
 
 **https://mwuos.github.io/**
 
@@ -19,7 +19,7 @@
 | 구성원·졸업생 | `content/members.json` |
 | 소식·공지 | `content/news.json` |
 | 연구 분야 | `content/research.json` |
-| 특허 | `content/patents.json` — 제목·영문 제목·번호는 KIPRIS 기록 그대로. 지금은 화면에 표시하지 않고 기록으로만 둔다 |
+| 특허 | `content/patents.json` — 제목·영문 제목·번호는 KIPRIS 기록 그대로. `status`가 `registered`(등록)인 특허만 논문/특허 페이지의 Patents 탭에 나오고, `filed`(출원 중)는 기록으로만 둔다 |
 | 연구실 이름·주소·연락처 | `content/site.json` |
 
 ## 가장 쉬운 방법 — 브라우저에서 바로 고치기
@@ -56,6 +56,7 @@ git을 설치하지 않아도 됩니다.
   "pdf": "",
   "code": "",
   "award": null,
+  "sci": true,
   "highlight": true
 }
 ```
@@ -70,6 +71,7 @@ git을 설치하지 않아도 됩니다.
 | `pages` | `"1234-1240"` |
 | `doi` | **식별자만.** `"10.1109/..."` (O) / `"https://doi.org/10.1109/..."` (X) — 링크는 자동 생성됩니다 |
 | `award` | 수상 없으면 `null`, 있으면 `"Best Paper Award"` 처럼 |
+| `sci` | 게재 당시 SCI(E) 등재 저널이면 `true`. 논문 목록에 SCI(E) 배지가 붙습니다. 아니면 `false` |
 | `highlight` | `true` 면 홈 화면에 노출됩니다. 대표 논문 2~3편만 |
 
 모르는 항목은 `""` 로 비워두면 화면에서 알아서 빠집니다. **없는 정보를 지어내지 마세요.**
@@ -112,7 +114,7 @@ git을 설치하지 않아도 됩니다.
 "title": "M.S. 2026 — Samsung Electronics"
 ```
 
-진로 정보는 `title` 에 적습니다. Alumni 섹션에 따로 모입니다.
+진로 정보는 `title` 에 적습니다. 상단 메뉴의 Alumni(졸업생) 페이지에 따로 모입니다.
 
 ---
 
