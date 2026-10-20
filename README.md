@@ -2,7 +2,7 @@
 
 서울시립대학교 전자전기컴퓨터공학부 **지능형 전파-에너지 연구센터(IUEC)** 홈페이지.
 
-**https://uos-iuec.github.io/**
+**https://mwuos.github.io/**
 
 > 개발 중입니다. 내용이 채워질 때까지 검색 엔진 색인은 막아 두었습니다.
 > 학교 도메인(`iuec.uos.ac.kr`)은 신청 예정입니다.
@@ -266,8 +266,8 @@ content/publications.json 형식이 스키마와 맞지 않습니다:
 Node.js 22 이상이 필요합니다.
 
 ```bash
-git clone https://github.com/UOS-IUEC/uos-iuec.github.io.git
-cd uos-iuec.github.io
+git clone https://github.com/MWUOS/mwuos.github.io.git
+cd mwuos.github.io
 npm install
 npm run build     # 최초 1회 필요 (아래 참고)
 npm run dev       # http://localhost:3000
@@ -301,4 +301,4 @@ public/        이미지·첨부파일
 코드를 고치기 전에 [CLAUDE.md](CLAUDE.md) 를 읽어 주세요. 스택 결정, 콘텐츠 스키마,
 커밋 메시지 규칙, 정적 export 제약이 모두 거기 있습니다.
 
-할 일과 결정 사항은 [Issues](https://github.com/UOS-IUEC/uos-iuec.github.io/issues) 에서 관리합니다.
+할 일과 결정 사항은 [Issues](https://github.com/MWUOS/mwuos.github.io/issues) 에서 관리합니다.

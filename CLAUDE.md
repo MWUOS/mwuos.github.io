@@ -15,8 +15,8 @@ Next.js 16의 변경점은 `next dev`가 자동 생성·갱신하는 AGENTS.md�
 | 약어 | IUEC |
 | 소속(영문) | School of Electrical and Computer Engineering, University of Seoul |
 | 소속(국문) | 서울시립대학교 전자전기컴퓨터공학부 |
-| GitHub | https://github.com/UOS-IUEC |
-| 사이트 | https://uos-iuec.github.io/ (도메인 신청 중: `iuec.uos.ac.kr`) |
+| GitHub | https://github.com/MWUOS |
+| 사이트 | https://mwuos.github.io/ (도메인 신청 중: `iuec.uos.ac.kr`) |
 
 - 연구실 이름은 헤더와 홈 제목에서는 한국어 화면에서도 **영문 명칭**을 쓴다. 푸터만 한국어 화면에서 **국문 명칭**(`site.json`의 `nameKo`)을 쓴다.
 - **`HiCAS`는 구 명칭이다.** 저장소 폴더명(`Hicas_Page`)에 흔적이 남아 있을 뿐이며, 사이트 문구·컴포넌트명·URL·메타데이터 어디에도 쓰지 않는다.
