@@ -3,17 +3,9 @@ import Image from "next/image";
 import L from "@/components/L";
 import type { Member, MemberRole } from "@/lib/content";
 
-type RoleGroup = { role: MemberRole; label: { en: string; ko: string }; members: Member[] };
+import MemberName from "@/components/MemberName";
 
-/**
- * 한국어 이름이 없으면 영문 이름을 양쪽에 쓴다.
- * center는 두 언어 이름을 같은 칸 가운데에 겹쳐 놓는다. 영문이 더 길어도 한국어 이름이 가운데 온다.
- */
-function MemberName({ member, center = false }: { member: Member; center?: boolean }) {
-  return (
-    <L en={member.name} ko={member.nameKo || member.name} fit={center ? "center" : "stack"} />
-  );
-}
+type RoleGroup = { role: MemberRole; label: { en: string; ko: string }; members: Member[] };
 
 /**
  * 학생 한 명 — 세로 3:4 사진과 이름. 사진은 증명사진처럼 얼굴이 위에 오도록 위쪽 기준으로 자른다.
@@ -51,16 +43,10 @@ function MemberCard({ member }: { member: Member }) {
 }
 
 /**
- * Students 페이지 본문 — 과정별(박사·석사·학부) 사진 카드, 그 아래 졸업생.
+ * Students 페이지 본문 — 과정별(박사·석사·학부) 사진 카드. 졸업생은 /alumni 페이지에 따로 있다.
  * 언어는 헤더의 전환 버튼을 따른다.
  */
-export default function StudentsContent({
-  groups,
-  alumni,
-}: {
-  groups: RoleGroup[];
-  alumni: Member[];
-}) {
+export default function StudentsContent({ groups }: { groups: RoleGroup[] }) {
   return (
     <div>
       {groups.length === 0 ? (
@@ -88,30 +74,6 @@ export default function StudentsContent({
           ))}
         </div>
       )}
-
-      {/* 졸업생은 이름과 진로 정보만 (title에 담겨 있다) */}
-      {alumni.length > 0 ? (
-        <section aria-labelledby="alumni-heading" className="mt-16 border-t border-line pt-10">
-          <h2 id="alumni-heading" className="font-semibold text-ink">
-            <L en="Alumni" ko="졸업생" />
-          </h2>
-          <ul className="mt-4 divide-y divide-line border-y border-line">
-            {alumni.map((member) => (
-              <li
-                key={member.id}
-                className="flex flex-col gap-0.5 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
-              >
-                <span className="font-medium">
-                  <MemberName member={member} />
-                </span>
-                {member.title ? (
-                  <span className="text-sm text-ink-muted sm:text-right">{member.title}</span>
-                ) : null}
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
     </div>
   );
 }

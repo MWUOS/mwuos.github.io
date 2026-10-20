@@ -66,17 +66,27 @@ export default function SiteHeader({
 
         <div className="flex items-center gap-3">
           <nav aria-label="Main" className="hidden md:block">
-            <ul className="flex items-center gap-1">
+            {/* 탭은 모두 같은 폭의 칸(가장 긴 라벨 기준)에 가운데 정렬한다.
+                언어를 바꿔도 칸 폭이 그대로라 버튼 위치가 움직이지 않고, 탭 사이 간격도 고르다 */}
+            <ul className="grid auto-cols-[1fr] grid-flow-col items-center gap-1">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href} className="group relative">
                   <Link
                     href={item.href}
                     aria-current={isItemActive(item) ? "page" : undefined}
-                    className={`rounded px-3 py-2 text-sm transition-colors hover:bg-surface ${
+                    className={`block rounded px-2 py-2 text-center text-sm lg:px-3 transition-colors hover:bg-surface ${
                       isItemActive(item) ? "font-medium text-accent" : "text-ink-muted"
                     }`}
                   >
-                    <L {...item.label} fit="center" />
+                    {/* 현재 탭은 굵게 그린다. 굵은 글자 폭을 늘 잡아 두어 탭을 옮겨도 칸 폭이 변하지 않게 한다 */}
+                    <span className="inline-grid justify-items-center">
+                      <span className="[grid-area:1/1]">
+                        <L {...item.label} fit="center" />
+                      </span>
+                      <span aria-hidden="true" className="invisible [grid-area:1/1] font-medium">
+                        <L {...item.label} fit="center" />
+                      </span>
+                    </span>
                   </Link>
                   {item.children ? (
                     // 마우스를 올리거나 키보드로 초점이 들어오면 펼친다. pt-2는 링크와 메뉴 사이 틈을 메워

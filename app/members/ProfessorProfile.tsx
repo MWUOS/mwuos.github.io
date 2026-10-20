@@ -21,8 +21,9 @@ function Timeline({ id, title, rows }: { id: string; title: Localized; rows: Tim
             className="grid gap-x-6 gap-y-0.5 text-sm leading-relaxed sm:grid-cols-[9.5rem_1fr]"
           >
             <span className="tabular-nums text-ink-muted">{row.when}</span>
+            {/* 영문이 훨씬 길어 큰 쪽 높이를 잡으면 한국어 화면에 빈 줄이 생긴다. 보이는 언어 높이만 쓴다 */}
             <span className="break-keep text-ink">
-              <L {...row.text} />
+              <L {...row.text} fit="inline" />
             </span>
           </li>
         ))}
