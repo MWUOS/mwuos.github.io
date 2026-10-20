@@ -32,7 +32,7 @@ const description =
   `Research areas and selected publications from ${site.name} (${site.shortName}) at the ${site.department.en}, ${site.university.en}.`;
 
 export const metadata: Metadata = {
-  // 홈만 "Home — IUEC" 대신 전체 명칭을 쓴다. 루트 페이지의 title이 곧 검색 결과 제목이다.
+  // 홈만 "Home — IMEC" 대신 전체 명칭을 쓴다. 루트 페이지의 title이 곧 검색 결과 제목이다.
   title: { absolute: `${site.name} — ${site.university.en}` },
   description,
 };

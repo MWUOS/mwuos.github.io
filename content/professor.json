@@ -26,11 +26,81 @@
   "experience": [
     {
       "period": "2002.03 – Present",
-      "en": "Professor, School of Electrical and Computer Engineering, University of Seoul",
-      "ko": "서울시립대학교 전자전기컴퓨터공학부 교수"
+      "en": "Assistant, Associate, and Full Professor, School of Electrical and Computer Engineering, University of Seoul",
+      "ko": "서울시립대학교 전자전기컴퓨터공학부 조교수·부교수·정교수"
     },
     {
-      "period": "2015.11 – 2018.02",
+      "period": "Present",
+      "en": "Vice President, Korean Institute of Electromagnetic Engineering and Science (KIEES)",
+      "ko": "한국전자파학회 부회장"
+    },
+    {
+      "period": "2025 – Present",
+      "en": "Steering Committee, LEO Satellite Communication Technology Development Program",
+      "ko": "저궤도 위성통신 기술개발 사업추진위원회"
+    },
+    {
+      "period": "2025",
+      "en": "TPC Chair, APMC 2025",
+      "ko": "APMC 2025 TPC Chair"
+    },
+    {
+      "period": "2024 – 2025",
+      "en": "Chair, Technical Committee on Electromagnetics in Medicine, KIEES",
+      "ko": "한국전자파학회 전파의료연구회 위원장"
+    },
+    {
+      "period": "2024",
+      "en": "Review Committee Member, Preliminary Feasibility Study for Satellite Communication Programs",
+      "ko": "위성통신 예타사업 심의위원"
+    },
+    {
+      "period": "2022.12 – Present",
+      "en": "Member, National Spectrum Review Committee",
+      "ko": "국가 주파수 심의위원"
+    },
+    {
+      "period": "2022.04 – Present",
+      "en": "Chair, Spectrum Committee, Satellite Communications Forum",
+      "ko": "위성통신포럼 주파수위원회 위원장"
+    },
+    {
+      "period": "2022",
+      "en": "TPC Chair, GSMM 2022",
+      "ko": "GSMM 2022 TPC Chair"
+    },
+    {
+      "period": "2021 – Present",
+      "en": "Member, Steering Committee, Geostationary Public Multi-Purpose Communication Satellite Development Program",
+      "ko": "정지궤도 공공복합통신위성 개발사업 추진위원회 위원"
+    },
+    {
+      "period": "2021 – 2024",
+      "en": "Expert Member for ICT Convergence, National Science and Technology Council",
+      "ko": "국가과학기술심의위원회 ICT융합 전문위원"
+    },
+    {
+      "period": "2019",
+      "en": "Preliminary Feasibility Study Planning, RF/Satellite Subcommittee, ICT R&D",
+      "ko": "ICT R&D RF 위성분과 예타 기획"
+    },
+    {
+      "period": "2017 – Present",
+      "en": "Member, International Steering Committee, IEEE APMC",
+      "ko": "IEEE APMC ISC (International Steering Committee) 위원"
+    },
+    {
+      "period": "2017 – 2023",
+      "en": "Chair, IEEE MTT-S Seoul Chapter",
+      "ko": "IEEE MTT-S Seoul Chapter Chair"
+    },
+    {
+      "period": "2016 – 2018",
+      "en": "Chair, Technical Committee on Microwaves, KIEES",
+      "ko": "한국전자파학회 마이크로파연구회 위원장"
+    },
+    {
+      "period": "2015.10 – 2018.02",
       "en": "Radio & Satellite PM/CP (National R&D Planning), Ministry of Science and ICT",
       "ko": "과학기술정보통신부 전파위성PM/CP (국가 R&D 기획)"
     },
@@ -59,6 +129,26 @@
   ],
   "awards": [
     {
+      "date": "2025",
+      "en": "Minister's Commendation, Ministry of Science and ICT (satellite frequency monitoring)",
+      "ko": "과학기술정보통신부 장관 표창 (위성주파수 감시)"
+    },
+    {
+      "date": "2022",
+      "en": "Commendation from the Administrator of the Seoul Regional Office of SMEs and Startups (industry–academia collaboration and technology transfer)",
+      "ko": "서울지방중소벤처기업청장상 (산학연협력·기술이전)"
+    },
+    {
+      "date": "2021",
+      "en": "Minister's Commendation, Ministry of Science and ICT (frequency management)",
+      "ko": "과학기술정보통신부 장관 표창 (주파수 업무)"
+    },
+    {
+      "date": "2021",
+      "en": "Academic Award, Korean Institute of Electromagnetic Engineering and Science",
+      "ko": "한국전자파학회 학술상"
+    },
+    {
       "date": "2015",
       "en": "Ministerial Commendation for Contributions to Radio Industry Promotion, Ministry of Science, ICT and Future Planning",
       "ko": "전파산업활성화 미래창조과학부 장관 공로 표창"
@@ -70,13 +160,8 @@
     },
     {
       "date": "2013",
-      "en": "Best Student Paper Award (2 papers), APMC",
-      "ko": "APMC Best Student Paper Award (2편)"
-    },
-    {
-      "date": "2013",
-      "en": "Best Award, IEEE International Conference on RFID",
-      "ko": "IEEE International Conference on RFID, Best Award"
+      "en": "Best Paper Award, IEEE International Conference on RFID",
+      "ko": "IEEE International Conference on RFID, Best Paper Award"
     },
     {
       "date": "2012",
