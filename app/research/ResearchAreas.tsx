@@ -158,8 +158,9 @@ export default function ResearchAreas({
                 key={`${project.start}-${project.title.en}`}
                 className="flex flex-col gap-0.5 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
               >
+                {/* 영문 과제명이 훨씬 길어 큰 쪽 높이를 잡으면 한국어 화면에 빈 줄이 생긴다. 보이는 언어 높이만 쓴다 */}
                 <span className="break-keep leading-relaxed text-ink">
-                  <L {...project.title} />
+                  <L {...project.title} fit="inline" />
                 </span>
                 <span className="shrink-0 text-sm tabular-nums text-ink-muted">
                   {/* 기간을 모르면 TODO 하나만 눈에 띄게 보여 준다 */}
