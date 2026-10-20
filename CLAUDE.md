@@ -107,9 +107,6 @@ GitHub Pages는 정적 파일만 서빙한다. 서버 런타임이 필요한 기
 
 `main`에 머지되면 `.github/workflows/deploy.yml`이 빌드해서 배포한다. 수동 업로드는 없다.
 
-사이트가 아직 검색에 잡히지 않도록 `app/layout.tsx`의 루트 metadata에 `robots: { index: false }`를 걸어 두었다.
-내용이 채워지고 공개 준비가 되면 그 두 줄을 지운다.
-
 ## 6. 콘텐츠 규칙
 
 필드 정의의 정본은 `lib/content.ts`의 zod 스키마다. 형식이 궁금하면 그 파일을 본다.

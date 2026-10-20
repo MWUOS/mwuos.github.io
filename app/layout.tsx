@@ -33,10 +33,6 @@ export const metadata: Metadata = {
     template: `%s — ${site.shortName}`,
   },
   description,
-
-  // 아직 내용이 플레이스홀더라 검색 색인을 막아 둔다.
-  // 실제 내용이 채워지고 공개 준비가 되면 이 두 줄을 지운다 (#3).
-  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
