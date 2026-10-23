@@ -1,5 +1,5 @@
 [
-  { "id": "park-seung-jun", "name": "Park Seung-jun", "nameKo": "박승준", "role": "phd" },
+  { "id": "park-seung-jun", "name": "Park Seung-jun", "nameKo": "박승준", "role": "phd", "photo": "/images/members/park-seung-jun.jpg" },
   { "id": "han-hae-been", "name": "Han Hae-been", "nameKo": "한해빈", "role": "phd", "photo": "/images/members/han-hae-been.jpg" },
   { "id": "jeong-gyeong-yong", "name": "Jeong Gyeong-yong", "nameKo": "정경용", "role": "ms", "photo": "/images/members/jeong-gyeong-yong.jpg" },
   { "id": "kim-seung-je", "name": "Kim Seung-je", "nameKo": "김승제", "role": "ms", "photo": "/images/members/kim-seung-je.jpg" },
